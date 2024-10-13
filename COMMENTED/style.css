@@ -1,0 +1,60 @@
+body { 
+    background-color: #f0f0f5; /* Définit une couleur de fond claire pour le corps de la page */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Définit la police pour le texte */
+}
+
+.container {
+    max-width: 700px; /* Limite la largeur maximale du conteneur */
+    margin: 120px auto; /* Centre le conteneur avec une marge supérieure de 120px et horizontale automatique */
+    padding: 40px; /* Ajoute un espacement interne de 40px */
+    background-color: #ffffff; /* Définit la couleur de fond blanche pour le conteneur */
+    border-radius: 8px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour du conteneur */
+    text-align: center; /* Centre le texte à l'intérieur du conteneur */
+}
+
+.logo {
+    width: 180px; /* Définit la largeur de l'image du logo */
+    margin-bottom: 25px; /* Ajoute une marge inférieure de 25px */
+}
+
+h1 {
+    color: #2c3e50; /* Définit la couleur du texte pour les titres de niveau 1 */
+    margin-bottom: 30px; /* Ajoute une marge inférieure de 30px */
+}
+
+h2 {
+    color: #34495e; /* Définit la couleur du texte pour les titres de niveau 2 */
+    margin-top: 30px; /* Ajoute une marge supérieure de 30px */
+    margin-bottom: 20px; /* Ajoute une marge inférieure de 20px */
+}
+
+.text-left {
+    text-align: left; /* Aligne le texte à gauche */
+    margin: 10px 0; /* Ajoute une marge verticale de 10px */
+    line-height: 1.6; /* Définit l'interligne pour améliorer la lisibilité */
+    color: #555555; /* Définit une couleur de texte gris foncé */
+} 
+
+.button {
+    display: inline-block; /* Permet aux boutons d'être alignés côte à côte */
+    padding: 14px 30px; /* Définit un espacement interne de 14px en haut/bas et 30px à gauche/droite */
+    margin: 12px; /* Ajoute une marge de 12px autour des boutons */
+    font-size: 18px; /* Définit la taille de la police pour le texte des boutons */
+    color: #ffffff; /* Définit la couleur du texte en blanc */
+    text-decoration: none; /* Supprime le soulignement du texte du lien */
+    border-radius: 6px; /* Arrondit les coins des boutons */
+    transition: background-color 0.3s ease; /* Ajoute une transition douce pour le changement de couleur de fond */
+}
+
+.button:hover {
+    opacity: 0.85; /* Diminue l'opacité du bouton lorsqu'il est survolé */
+}
+
+.btn-register {
+    background-color: #0056b3; /* Définit la couleur de fond pour le bouton d'inscription */
+}
+
+.btn-login {
+    background-color: #28a745; /* Définit la couleur de fond pour le bouton de connexion */
+}

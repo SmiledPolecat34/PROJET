@@ -1,0 +1,26 @@
+Voici ici la liste des bonus que j'ai ajouté à l'application :
+
+
+1. Génération Automatique d'IBAN
+- Un système a été mis en place pour générer automatiquement un IBAN unique pour chaque compte bancaire lors de sa création, avec une vérification préalable pour s'assurer que l'IBAN n'existe pas déjà avant de l'attribuer.
+
+2. Ajout et Gestion des Bénéficiaires
+- La fonctionnalité permet à un client d'ajouter des bénéficiaires avec un compte spécifique. Il est également possible de voir, modifier, et supprimer les bénéficiaires sans affecter leur compte bancaire dans la base de données.
+
+3. Gestion des Virements avec Bénéficiaires
+- Une fonctionnalité a été ajoutée pour effectuer des virements non seulement vers les propres comptes du client, mais aussi vers les comptes bénéficiaires. La validation inclut une vérification du solde pour éviter les découverts, et un champ obligatoire pour indiquer le motif du virement a été intégré.
+
+4. Affichage du Solde et Historique des Transferts
+- Avant de valider un virement ou un retrait, le solde du compte émetteur est affiché pour permettre à l'utilisateur de consulter l'état de son compte. Une page dédiée a été créée pour que l'utilisateur puisse consulter l'historique des transferts effectués et reçus, avec des détails comme le montant, le motif, et les informations sur l'émetteur ou le destinataire.
+
+5. Sécurité Renforcée
+- Un système de token CSRF a été ajouté pour sécuriser les formulaires contre les attaques de type "cross-site request forgery" (CSRF). Des validations supplémentaires ont également été ajoutées en JavaScript pour vérifier le format de l'IBAN et éviter les soumissions incorrectes.
+
+6. Validation Avancée des Formulaires
+- En plus des validations pour le numéro de compte, le type de compte et le mot de passe, une validation plus stricte a été ajoutée pour vérifier le format des champs, et s'assurer que le mot de passe ne contient pas d'espaces.
+
+7. Système de Messages et Avertissements
+- Des messages d'alerte informent l'utilisateur lorsqu'il manque des éléments, comme l'absence de bénéficiaires ou de comptes supplémentaires pour un virement interne. Ces messages permettent à l'utilisateur de savoir quelles actions doivent être effectuées.
+
+8. Améliorations Esthétiques et Utilisation de Bootstrap
+- En plus de la fonctionnalité, l'interface utilisateur a été améliorée avec l'intégration de Bootstrap, rendant l'application plus conviviale et agréable à utiliser.

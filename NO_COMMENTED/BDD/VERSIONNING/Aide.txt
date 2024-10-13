@@ -1,0 +1,25 @@
+Il vaut mieux utiliser la base vierge, et des données pour
+voir pleinement les fonctionnalités de l'application.
+
+logins :
+
+MariaDB [banque_db]> select * from client;
++----------+---------+----------+------------+----------------------------------+--------------------------------------------------------------+---------------------+
+| clientId | nom     | prenom   | telephone  | email
+                 | mdp
+                 | dateCreation        |
++----------+---------+----------+------------+----------------------------------+--------------------------------------------------------------+---------------------+
+|       10 | VERSAYO | FRANKLIN | 0784983989 | Versayo.franklin@gmail.com       | $2y$10$aZACRmVVLulaBlPptpKQQupy7YUOc5VZM7m/aOBQQhxkR.4qyraki | 2024-10-12 12:18:12 |
+|       11 | test    | testeur  | 0972095822 | test1@gmail.com                  | $2y$10$kdMpbhcKMcBic/YnoTjQvueZxTAQkdFFzSPyGKMVlWlT0aua8dL6S | 2024-10-12 12:19:05 |
+|       12 | test2   | Fae      | 0427590829 | waw@koosa.com                    | $2y$10$uVChTZULDVhNx4udSWyZAeMPcfzNlmeFyF0O.NrusPPvUGPbOgMvG | 2024-10-12 12:47:45 |
+|       13 | Versayo | karine   | 0962952749 | a@a.com
+                 | $2y$10$vLB2JFRPtUFg1YqebWBBCu06I/jFzkFzOE379YYxX8hHP4hA0vyf6 | 2024-10-12 15:18:26 |
+|       15 | VERSAYO | Tai      | 0784983989 | b@b.com
+                 | $2y$10$zUJdrKihbUZgbJGfbXJdyex/HmeQDU1mZ143ASpFQp.V4sD.kM.ae | 2024-10-12 15:24:54 |
+|       16 | VERSAYO | FRANKLIN | 0784983989 | svdsf@gmail.com                  | $2y$10$SWmQ4jGsOIBzhyNkCBQXH.mHtWtoinZF7EhEvuhXh8Wn2kCNEFfF. | 2024-10-12 15:25:48 |
+|       17 | VERSAYO | FRANKLIN | 0784983989 | sssf@gmail.com                   | $2y$10$TGQIuKwhaTA71G54PfT9SOtDk4QGw2NUvLQlN/D37V.cJQ6.CyKYC | 2024-10-12 15:26:08 |
+|       18 | Versayo | Franklin | 0762199414 | zefgtffr@a.com                   | $2y$10$4SR23THmZEDYoBKw/UHuC.p1VXU9D7cVNdYkrMMNS1.xvSVDXvKQK | 2024-10-12 15:27:11 |
+|       19 | VERSAYO | FRANKLIN | 0784983989 | Versayo.fsqdfbgranklin@gmail.com | $2y$10$TtTsGAM1vRTL.9WxGuKgRewABTFH/kzdlSN9smWA64yi6xJeTlI0C | 2024-10-12 15:27:56 |
+
+essayer "azerty" pour le mot de passe.
+Si ça ne marche pas, c'est que j'ai changé le mot de passe, et que je ne m'en souviens plus.

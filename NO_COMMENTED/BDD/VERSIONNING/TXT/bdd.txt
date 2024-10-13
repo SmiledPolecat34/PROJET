@@ -1,0 +1,58 @@
+CREATE DATABASE IF NOT EXISTS banque_db;
+USE banque_db;
+
+-- Table client
+CREATE TABLE IF NOT EXISTS client (
+    clientId INT(11) AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    telephone VARCHAR(15),
+    email VARCHAR(50),
+    mdp VARCHAR(150) NOT NULL,
+    dateCreation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table comptebancaire
+CREATE TABLE IF NOT EXISTS comptebancaire (
+    compteId INT(11) AUTO_INCREMENT PRIMARY KEY,
+    numeroCompte VARCHAR(27) NOT NULL UNIQUE,
+    solde DECIMAL(10, 2) DEFAULT 0.00,
+    typeDeCompte ENUM('Courant', 'Epargne', 'Entreprise') NOT NULL,
+    dateOuverture TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    clientId INT(11),
+    FOREIGN KEY (clientId) REFERENCES client(clientId)
+        ON UPDATE RESTRICT ON DELETE RESTRICT
+);
+
+-- Table beneficiaires
+CREATE TABLE IF NOT EXISTS beneficiaires (
+    beneficiaireId INT(11) AUTO_INCREMENT PRIMARY KEY,
+    clientId INT(11) NOT NULL,
+    beneficiaireCompteId INT(11) NOT NULL,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    FOREIGN KEY (clientId) REFERENCES client(clientId)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (beneficiaireCompteId) REFERENCES comptebancaire(compteId)
+        ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+-- Table transferts
+CREATE TABLE IF NOT EXISTS transferts (
+    transfertId INT(11) AUTO_INCREMENT PRIMARY KEY,
+    emetteurId INT(11) NOT NULL,
+    destinataireId INT(11) NOT NULL,
+    montant DECIMAL(10, 2) NOT NULL,
+    motif VARCHAR(255) NOT NULL,
+    dateTransfert DATETIME NOT NULL,
+    emetteurCompteId INT(11) NOT NULL,
+    beneficiaireCompteId INT(11) NOT NULL,
+    FOREIGN KEY (emetteurId) REFERENCES client(clientId)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (destinataireId) REFERENCES client(clientId)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (emetteurCompteId) REFERENCES comptebancaire(compteId)
+        ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (beneficiaireCompteId) REFERENCES comptebancaire(compteId)
+        ON UPDATE CASCADE ON DELETE CASCADE
+);
